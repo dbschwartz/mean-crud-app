@@ -1,13 +1,12 @@
 language: node_js
-
-node_js:
-  -"5"
-  - "4.1"
-  - "4.0"
-  - '0.12'
-  - '0.11'
-
+node_js: -"5" - "4.1" - "4.0" - '0.12' - '0.11'
 services: mongodb
-
 before_script:
-  - npm install -g mocha
+- npm install -g mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: naYCaAviTxt663bjEm1RuQjC8eWxKpoI4VxPeIN3FgcSV/PJFzDwDfR1lB2Q4/Fhe8MP3yqzCTscsQ1jOugoa6jfIjvTNkNJDyuVPZi/i8yKOMUY7OlsT4zYDtUcuiZ1Yc+c6StRHxQKBumPmyNBAGf7aDIdZhOdOoCJegTSN7qF3UnmGmAAh9VQG7FVyPpkDRJj32PYakbHI2XnBlUtnoYn/dsVbHi8qz5vNpWNZE9xOhdT/vx15z0vfaig2DVB3mzk6HBAXE5LulFH2wfTUq2QYBP3OrfPmzn3hchdYkACNEuvNHOutOfbXuINws0H6TQ8MjcjaHBGQpXBxXeZKtFP1e4f5a+FYumpIQtLR5K7QAJz2VpK+IJGnlHolknEnivuWovWMmxx4FbQ0GNXtF2XwF8MRB3tV9SnnC2IUbA6nBDksQRQtUUqCRacaDLZh2she8CnMaQDCOkdfpq34Np4afyPP6UrdEceG9vQVBftpanFcuLVbhG06tMK4mTOdZDhaT8MALVj+3Fd9u8CwOah4Y9ObmIPM6aC0K2lPJZmQaK6vhjAzNdW0iLi67kUL+ul0XeIOjttBSDyCmIg1wgJy08zKmKxRvaUusEkRPXum+/yw9d4kD8Rw0QeMjn7V7mqBDXBHlkrwiD3qx7694iF7b+y9o5rAirARcPo4UY=
+  app: cryptic-inlet-97400
+  on:
+    repo: dbschwartz/mean-crud-app
